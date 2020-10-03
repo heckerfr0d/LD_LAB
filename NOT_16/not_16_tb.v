@@ -1,5 +1,3 @@
-`include "not_16.v"
-
 module stimulus;
 
 wire [15:0] b;

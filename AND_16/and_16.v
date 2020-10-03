@@ -1,5 +1,3 @@
-`include "and.v"
-
 module and_16(c, a, b);
 
 output [15:0] c;

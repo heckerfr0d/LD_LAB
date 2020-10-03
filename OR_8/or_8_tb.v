@@ -1,5 +1,3 @@
-`include "or_8.v"
-
 module stimulus;
 
 wire c;

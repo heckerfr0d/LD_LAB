@@ -1,5 +1,3 @@
-`include "not.v"
-
 module stimulus;
 
 wire c;

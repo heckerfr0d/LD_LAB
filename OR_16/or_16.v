@@ -1,5 +1,3 @@
-`include "or.v"
-
 module or_16(c, a, b);
 
 output [15:0] c;

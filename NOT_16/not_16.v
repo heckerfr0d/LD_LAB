@@ -1,5 +1,3 @@
-`include "not.v"
-
 module not_16(b, a);
 
 output [15:0] b;

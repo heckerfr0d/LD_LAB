@@ -1,5 +1,3 @@
-`include "or_16.v"
-
 module stimulus;
 
 wire [15:0] c;
