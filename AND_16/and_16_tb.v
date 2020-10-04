@@ -7,7 +7,7 @@ integer i, j;
 
 and_16 and_16_1(c, a, b);
 
-always
+initial
 begin
   $monitor("%b %b %b ", a, b, c);
   $dumpfile("and_16.vcd");

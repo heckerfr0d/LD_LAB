@@ -6,7 +6,7 @@ reg [7:0] a1;
 integer i;
 or_8 or_8_1(c, a1);
 
-always
+initial
 begin
     $monitor("%b %b %b %b %b %b %b %b   %b", a1[0], a1[1], a1[2], a1[3], a1[4], a1[5], a1[6], a1[7], c);
     $dumpfile("or_8.vcd");

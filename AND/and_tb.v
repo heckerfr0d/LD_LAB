@@ -3,7 +3,7 @@ module stimulus;
 wire c;
 reg [1:0] count;
 
-and2 and_1(c, count[1], count[0]);
+and1 and_1(c, count[1], count[0]);
 
 initial
 begin

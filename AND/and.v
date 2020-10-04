@@ -1,4 +1,4 @@
-module and2(output c, input a, input b);
+module and1(output c, input a, b);
 
 wire c1;
 

@@ -7,7 +7,7 @@ integer i, j;
 
 or_16 or_16_1(c, a, b);
 
-always
+initial
 begin
   $monitor("%b %b %b ", a, b, c);
   $dumpfile("or_16.vcd");
