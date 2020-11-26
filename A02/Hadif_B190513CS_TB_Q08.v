@@ -18,23 +18,23 @@ begin
   $display("x =%d, y =%d", x, y);
   // $display("         x               y         zx  nx  zy  ny  f  no         out        zr  ng");
   $display("|    x  |    y   |zx  |nx  |zy  |ny |f   |no |    out       |zr  |ng |");
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (0)   |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  ( 0 ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b101010 ; #10 ; // 0
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (1)   |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  ( 1 ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b111111 ; #10 ; // 1
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (-1)  |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (-1 ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b111010 ; #10 ; // -1
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (x)   |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  ( x ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b001100 ; #10 ; // x
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (y)   |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  ( y ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b110000 ; #10 ; // y
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (!x)  |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (!x ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b001101 ; #10 ; // !x
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (!y)  |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (!y ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b110001 ; #10 ; // !y
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (-x)  |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (-x ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b001111 ; #10 ; // -x
-  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (-y)  |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
+  $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (-y ) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b110011 ; #10 ; // -y
   $monitor("|%d |%d  |%b   |%b   |%b   |%b  |%b   |%b  |%d  (x+1) |%b   |%b  |", x, y, f[5], f[4], f[3], f[2], f[1], f[0], o, zr, ng);
 	f = 6'b011111 ; #10 ; // x+1

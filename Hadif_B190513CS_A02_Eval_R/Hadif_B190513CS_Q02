@@ -1,0 +1,154 @@
+# Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
+# Loading project a3
+# reading modelsim.ini
+# Loading project Hadif_B190513CS_A01_Eval_R
+# reading modelsim.ini
+# Loading project Hadif_B190513CS_A02_Eval_R
+# reading modelsim.ini
+project open C:/Modeltech_pe_edu_10.4a/examples/Hadif_B190513CS_A01_Eval_R
+# Loading project Hadif_B190513CS_A01_Eval_R
+# Compile of Hadif_B190513CS_Q01.v was successful.
+# Compile of Hadif_B190513CS_Q01_TB.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.stimulus_eval
+# //  ModelSim PE Student Edition 10.4a Apr  7 2015 
+# //
+# //  Copyright 1991-2015 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim -gui 
+# Start time: 14:59:35 on Nov 23,2020
+# Loading work.stimulus_eval
+# Loading work.circuitI
+# Loading work.xor_16
+# Loading work.and_16
+# Loading work.or_16
+# Loading work.mux4
+# Loading work.mux_16
+# Loading work.xor1
+# Loading work.and1
+# Loading work.or1
+# Loading work.nor1
+# Loading work.xnor1
+add wave  \
+sim:/stimulus_eval/oA \
+sim:/stimulus_eval/iA \
+sim:/stimulus_eval/iB \
+sim:/stimulus_eval/S
+run -all
+# ** Warning: (vsim-PLI-3826) C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A01_Eval_R/Hadif_B190513CS_Q01_TB.v(16): $dumpfile : This task should be called prior to the $dumpvars
+# 
+# task.  The $dumpfile task will be ignored.
+#    Time: 0 ns  Iteration: 0  Instance: /stimulus_eval
+# 0000000000000101 0000000000000111 00   0000000000000010
+# 0000000000000101 0000000000000111 01   0000000000000101
+# 0000000000000101 0000000000000111 10   1111111111111000
+# 0000000000000101 0000000000000111 11   0000000000000010
+quit -sim
+project open C:/Modeltech_pe_edu_10.4a/examples/Hadif_B190513CS_A02_Eval_R
+# reading modelsim.ini
+# Loading project Hadif_B190513CS_A02_Eval_R
+# Compile of Hadif_B190513CS_Q01.v was successful.
+# Compile of Hadif_B190513CS_Q01_TB.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.AII_eval_tb
+# vsim 
+# Start time: 15:47:06 on Nov 23,2020
+# Loading work.AII_eval_tb
+# Loading work.circuitII
+# Loading work.mux_16
+# Loading work.add_16
+# Loading work.add_4
+# Loading work.fulladder
+# Loading work.halfadder
+# Loading work.xor1
+# Loading work.or1
+# Loading work.and1
+# Loading work.neg_16
+# ** Warning: (vsim-3015) C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v(96): [PCDPC] - Port size (16) does not match connection size (32) for port 'i1'. The port definition is at: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v(53).
+#    Time: 0 ns  Iteration: 0  Instance: /AII_eval_tb/a/m128 File: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v
+add wave  \
+sim:/AII_eval_tb/o \
+sim:/AII_eval_tb/zr \
+sim:/AII_eval_tb/ng \
+sim:/AII_eval_tb/x \
+sim:/AII_eval_tb/y \
+sim:/AII_eval_tb/f
+run -all
+# x =  1023, y =  2047
+# |    x  |    y   |zx  |nx  |zy  |ny |f   |f1  |no  |    out       |zr  |ng |
+# |  1023 |  2047  |1   |1   |1   |1  |1   |0   |1   | -2047  ( 1 ) |0   |1  |
+# |  1023 |  2047  |1   |1   |0   |0  |0   |0   |1   | -2048  (!y ) |0   |1  |
+# |  1023 |  2047  |0   |0   |1   |1  |1   |0   |0   |  3070  (x-1) |0   |0  |
+# |  1023 |  2047  |1   |1   |0   |0  |1   |0   |0   |  2046  (y-1) |0   |0  |
+# |  1023 |  2047  |0   |0   |0   |0  |1   |0   |0   |  3070  (x+y) |0   |0  |
+# |  1023 |  2047  |0   |0   |0   |0  |1   |1   |0   |  1151 (x+128)|0   |0  |
+# |  1023 |  2047  |0   |1   |0   |0  |1   |0   |1   | -1024  (x-y) |0   |1  |
+# |  1023 |  2047  |0   |0   |0   |0  |0   |0   |0   |  1023  (x&y) |0   |0  |
+# |  1023 |  2047  |0   |1   |0   |1  |0   |0   |1   | -1025  (x|y) |0   |1  |
+# ** Note: $finish    : C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01_TB.v(39)
+#    Time: 90 ns  Iteration: 0  Instance: /AII_eval_tb
+# 1
+# Break in Module AII_eval_tb at C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01_TB.v line 39
+quit -sim
+# Compile of Hadif_B190513CS_Q01.v was successful.
+# Compile of Hadif_B190513CS_Q01_TB.v was successful.
+# Compile of Hadif_B190513CS_Q02.v was successful.
+# Compile of Hadif_B190513CS_Q02_TB.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.AIIdash_eval_tb
+# vsim 
+# Start time: 16:26:08 on Nov 23,2020
+# Loading work.AIIdash_eval_tb
+# Loading work.circuitII_dash
+# Loading work.circuitII
+# Loading work.mux_16
+# Loading work.add_16
+# Loading work.add_4
+# Loading work.fulladder
+# Loading work.halfadder
+# Loading work.xor1
+# Loading work.or1
+# Loading work.and1
+# Loading work.neg_16
+# ** Warning: (vsim-3015) C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q02_TB.v(11): [PCDPC] - Port size (16) does not match connection size (1) for port 'out_dash'. The port definition is at: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q02.v(3).
+#    Time: 0 ns  Iteration: 0  Instance: /AIIdash_eval_tb/a File: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q02.v
+# ** Warning: (vsim-3015) C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v(77): [PCDPC] - Port size (16) does not match connection size (32) for port 'i1'. The port definition is at: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v(53).
+#    Time: 0 ns  Iteration: 0  Instance: /AIIdash_eval_tb/a/c1/m128 File: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v
+# ** Warning: (vsim-3015) C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v(77): [PCDPC] - Port size (16) does not match connection size (32) for port 'i1'. The port definition is at: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v(53).
+#    Time: 0 ns  Iteration: 0  Instance: /AIIdash_eval_tb/a/c2/m128 File: C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q01.v
+add wave  \
+sim:/AIIdash_eval_tb/out_dash \
+sim:/AIIdash_eval_tb/zr_dash \
+sim:/AIIdash_eval_tb/ng_dash \
+sim:/AIIdash_eval_tb/x \
+sim:/AIIdash_eval_tb/y \
+sim:/AIIdash_eval_tb/f0 \
+sim:/AIIdash_eval_tb/y_dash \
+sim:/AIIdash_eval_tb/f1 \
+sim:/AIIdash_eval_tb/o \
+sim:/AIIdash_eval_tb/zr \
+sim:/AIIdash_eval_tb/ng
+run -all
+# x =  1023, y =  2047
+# |    x  |    y   |zx  |nx  |zy  |ny |f0  |f1  |no  |    out        |zr  |ng |
+# |  1023 |  2047  |0   |0   |1   |1  |0   |0   |0   |0  (x+y)  |0   |0  |0100100
+# |  1023 |  2047  |0   |0   |1   |1  |0   |0   |0   |0 (x+128) |0   |0  |0110100
+# |  1023 |  2047  |0   |0   |0   |0  |1   |0   |0   |0(x+y+128)|0   |0  |0110000
+# ** Note: $finish    : C:/Modeltech_pe_edu_10.4a/examples/LD_LAB/Hadif_B190513CS_A02_Eval_R/Hadif_B190513CS_Q02_TB.v(34)
+#    Time: 30 ns  Iteration: 0  Instance: /AIIdash_eval_tb
+# End time: 16:26:25 on Nov 23,2020, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 3

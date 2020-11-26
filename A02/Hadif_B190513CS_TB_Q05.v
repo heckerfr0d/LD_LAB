@@ -11,10 +11,10 @@ initial
 begin
   $dumpfile("add16.vcd");
   $dumpvars(0, a16);
-  for (a = 0; a<255 ; a = a+1 )
-    for (b = 0; b<255 ; b = b+1)
+  for (a = 0; a<32767 ; a = a+1234 )
+    for (b = 0; b<32767 ; b = b+5678)
     begin
-        $monitor("%d +%d =%d", a, b, s);
+        $monitor("%d + %d = %d", a, b, s);
         #10;
     end
   $finish;

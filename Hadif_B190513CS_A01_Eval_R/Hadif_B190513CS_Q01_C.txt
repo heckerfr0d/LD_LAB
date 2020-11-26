@@ -1,0 +1,12 @@
+Design Filename        - Used Module name:
+
+Hadif_B190513CS_Q02.v  - and1   A01
+Hadif_B190513CS_Q03.v  - or1    A01
+Hadif_B190513CS_Q04.v  - nor1   A01
+Hadif_B190513CS_Q05.v  - xor1   A01
+Hadif_B190513CS_Q06.v  - xnor1  A01
+Hadif_B190513CS_Q08.v  - and_16 A01
+Hadif_B190513CS_Q09.v  - or_16  A01
+Hadif_B190513CS_Q010.v - xor_16 A01
+Hadif_B190513CS_Q014.v - mux_16 A01
+Hadif_B190513CS_Q015.v - mux4   A01
