@@ -1,3 +1,3 @@
 # LD_LAB
 
-![](/mnt/c/Users/LENOVO/Pictures/Screenshots/Screenshot.png)
+Lajik Design... Ithil koodthal onnum pareyan illa :')
